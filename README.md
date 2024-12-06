@@ -18,6 +18,34 @@ C:.
 ## Project Overview
 This project implements a deep learning solution for detecting defects in industrial components using computer vision. The system combines two distinct datasets and employs data augmentation techniques to create a robust defect detection model.
 
+## Model Performance
+
+### Training Results
+- Final Training Accuracy: 96.42%
+- Final Training Loss: 0.1106
+- Final Validation Accuracy: 90.26%
+- Final Validation Loss: 0.2060
+
+### Test Set Performance
+- Overall Accuracy: 92%
+
+#### Class-wise Performance:
+- Defective Class:
+  - Precision: 0.89
+  - Recall: 0.96
+  - F1-score: 0.92
+  
+- Non-defective Class:
+  - Precision: 0.96
+  - Recall: 0.88
+  - F1-score: 0.91
+
+### Confusion Matrix Analysis
+```
+              Predicted Defective    Predicted Non-defective
+Actual Defective         603                 26
+Actual Non-defective     78                  557
+```
 ## Dataset Description
 
 ### Dataset Sources
@@ -58,34 +86,7 @@ For each original image, 5 augmented copies were generated, significantly increa
   - Input size: 224x224 pixels
   - Output classes: 2 (defective, non-defective)
 
-## Model Performance
 
-### Training Results
-- Final Training Accuracy: 96.42%
-- Final Training Loss: 0.1106
-- Final Validation Accuracy: 90.26%
-- Final Validation Loss: 0.2060
-
-### Test Set Performance
-- Overall Accuracy: 92%
-
-#### Class-wise Performance:
-- Defective Class:
-  - Precision: 0.89
-  - Recall: 0.96
-  - F1-score: 0.92
-  
-- Non-defective Class:
-  - Precision: 0.96
-  - Recall: 0.88
-  - F1-score: 0.91
-
-### Confusion Matrix Analysis
-```
-              Predicted Defective    Predicted Non-defective
-Actual Defective         603                 26
-Actual Non-defective     78                  557
-```
 
 The model shows strong performance with balanced precision and recall across both classes, achieving an overall accuracy of 92%. The confusion matrix indicates a slightly higher tendency to correctly identify defective items (603 true positives) compared to non-defective items (557 true negatives).
 
