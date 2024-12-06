@@ -1,5 +1,20 @@
 # Industrial Defect Detection using Deep Learning
 
+## Project Structure
+```
+C:.
+│   Defect_Detection.ipynb    # Main notebook for development and testing
+│   model_best.pth           # Saved model weights
+│   README.md                # Project documentation
+│   requirement.txt          # Dependencies
+│
+└───src
+        data_preparation.py  # Dataset processing and augmentation
+        evaluate.py         # Model evaluation scripts
+        model.py           # Model architecture definition
+        train.py           # Training pipeline
+```
+
 ## Project Overview
 This project implements a deep learning solution for detecting defects in industrial components using computer vision. The system combines two distinct datasets and employs data augmentation techniques to create a robust defect detection model.
 
@@ -74,20 +89,7 @@ Actual Non-defective     78                  557
 
 The model shows strong performance with balanced precision and recall across both classes, achieving an overall accuracy of 92%. The confusion matrix indicates a slightly higher tendency to correctly identify defective items (603 true positives) compared to non-defective items (557 true negatives).
 
-## Project Structure
-```
-C:.
-│   Defect_Detection.ipynb    # Main notebook for development and testing
-│   model_best.pth           # Saved model weights
-│   README.md                # Project documentation
-│   requirement.txt          # Dependencies
-│
-└───src
-        data_preparation.py  # Dataset processing and augmentation
-        evaluate.py         # Model evaluation scripts
-        model.py           # Model architecture definition
-        train.py           # Training pipeline
-```
+
 
 ## Dependencies
 - PyTorch
